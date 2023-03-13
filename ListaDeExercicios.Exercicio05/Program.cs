@@ -1,7 +1,7 @@
 ﻿//Volume de uma esfera
-//    V = 4/3 * pi * r elavada na 3
+//    V = 4/3 * pi * r elevada na 3
 
-// 4/3 * math.pi * Math.Pow( number1 * number2);     number1 = r numeber2 = 3
+
 
 
 
