@@ -1,47 +1,37 @@
-﻿using System.ComponentModel.Design;
-using System.Transactions;
-
-namespace ListaDeExercicios.Exercicio19
+namespace Exercicio19.ConsoleApp
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("   IMC   ");
+            Console.WriteLine("Digite seu peso em kg:");
+            decimal peso = Convert.ToDecimal(Console.ReadLine());
 
-            Console.Write(" Digite o seu peso: ");
-            double peso = double.Parse(Console.ReadLine());
-                
-            Console.Write(" Digite a sua altura: ");
-            double altura = double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite sua altura em metros:");
+            decimal altura = Convert.ToDecimal(Console.ReadLine());
 
-            double imc;
+            decimal imc = peso / (altura * altura);
 
-            imc = (peso / (altura * altura));
+            Console.WriteLine("Seu IMC é: " + imc);
 
-            if (imc <= 18.5)
+            if (imc < 18.5m)
             {
-                Console.WriteLine(" Abaixo do peso ");
-            }          
-
-            else if ((18.5 < imc) && (imc < 25))
-            {
-                Console.WriteLine(" Peso normal ");
+                Console.WriteLine("Abaixo do peso");
             }
-             
-            else if ((25 <= imc) && (30 > imc))
+            else if (imc < 25)
             {
-                Console.WriteLine(" Acima do Peso");
+                Console.WriteLine("Peso normal");
             }
-
-            else if ( 30 <= imc)
+            else if (imc < 30)
             {
-                Console.WriteLine(" Obeso ");
+                Console.WriteLine("Acima do peso");
+            }
+            else
+            {
+                Console.WriteLine("Obeso");
             }
 
             Console.ReadLine();
-            
-
         }
     }
 }
