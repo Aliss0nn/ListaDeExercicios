@@ -21,7 +21,7 @@ namespace ListaDeExercicios.Exercicio05
             double result = 0;
 
 
-                result = (4/3) * 3.14 * Math.Pow(raio, t);
+                result = (4.0/3.0) * 3.14 * Math.Pow(raio, t);
             
             Console.WriteLine("O Resultado é: " +  result);
 
